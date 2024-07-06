@@ -1,6 +1,7 @@
 import { version, Suspense, createContext } from 'react'
 import TestUse from './components/TestUse'
 import Actions from './components/Actions';
+import TestuseActionState from './components/TestuseActionState';
 
 export const userContext = createContext()
 
@@ -13,8 +14,9 @@ function App() {
           <TestUse />
         </Suspense>
       </userContext.Provider>
-      <h2>Actions</h2>
+      <h2>Actions with useFromStatus</h2>
       <Actions />
+      <TestuseActionState />
     </div>
   );
 }

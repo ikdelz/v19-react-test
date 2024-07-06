@@ -11,6 +11,8 @@ const Button = () => {
 const Actions = () => {
 
   const formAction = async (formData) => {
+    if (!formData.get("email") || !formData.get("password")) return;
+
     await new Promise((resolve) => setTimeout(resolve, 2000))
     const user = {
       email : formData.get('email'),
